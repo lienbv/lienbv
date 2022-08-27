@@ -1,0 +1,71 @@
+I.Tính chât của  OOPs:
+có 4 tính chất:
+1.Kế thừa: Thừa kế tất cả các phương thức và thuộc tính của lớp cha
+2.Đóng gói: bảo vệ thông tin bên trong của đối tuongj không thể truy cập trực tiếp và phải thông qua getter và setter với các access modifier là public;
+3. trừu tượng: chỉ ra tên chức năng mà không hiển thị nội dụng bên trong bằng cách sử dụng abstract và interface
+4. Đa hình: Một tác vụ được thực hiện bằng nhiều tác vụ khác nhau. Được thể hiện qua nạp chồng( overloadding ) và ghi đè (overiding) 
+** Đa hình lúc biên dịch ( compile time): khi chúng bị ràng buộc với chức năng lúc thời gian biên dịch 
+** Đa hình lúc runtime: khi chúng bị ràng buộc với chức năng trong thời gian chạy
+** interface: thực hiện được nhiều interface; mọi phương thức mặc định là public, hỗ trợ đa kế thừa; 
+** Abtract: có thể implemenr các interface,trong khi interface thì không  thể implement abstract class trong khi.
+vd: abtract class Xe{
+ abtract khoiDOngDOngCow();
+}
+interface dichuyen();
+** Dùng Abtract khi: nhóm đối tượng có cùng bản chất
+** Dùng Interface: có cùng hành động.
+
+II. Lamda:
+hàm ẩn danh xử lí bằng đầu vào và body
+Function interface: là interface có duy nhất 1 abtract
+II. partition: chia bảng to thành nhiều bảng nhỏ
+index: tăng tốc độ truy vấn dữ liệu chứa where or order nhưng làm chậm việc dữ liệu nhập vào.
+III. Design pattens:
+có 3 loại: nhóm khởi tạo, nhóm cấu trúc và nhóm hành vi
+1. singleton: chỉ tạo ra 1 instance duy nhất và cung cấp 1 cổng để giao tiếp chung: tạo ra đối tượng duy nhất sử dụng từ đầu 
+2. Adapter pattern: làm cho 2 class không liên quan với nhau có thể 
+
+** map lưu trữ dưới dạng key và value; set lưu trữ dưới dạng dữ liệu.
+** quee: cấu trúc dữ liệu hàng đợi
+
+IV. JWT:
+người dùng gọi authentication service thường là gửi usrenam và password
+Authentication service phản hồi cho người dùng mã jwt, định nghĩa ra xem người dùng là ai, 
+Người dùng yêu cầu truy cập 1 dịch vụ nào đó bằng cách gửi tokken
+lớp bảo mật sẽ check chữ kí trên token và nếu quyền truy cập hợp lệ thì sẽ tiếp tục được truy cập
+
+V. String 
+String là một mảng một chuỗi kí tự giá trị bất biến, 
+String pool : vùng nhơ lưu trữ các biến String literal trong heap
+StringBuilder: không đồng bộ
+StringBuffet: đồng bộ 
+VI. Generic: tham số hóa dữ liệu, dễ dàng bắt lõi dũ liệu không hợp lệ 
+VII. Stream: Xử lí tập dữ liệu và collection thông qua vòng lặp or bộ lặp Interation
+có 3 giai đoạn:
+tạo stream, thực hiện thao tác trung gian, thực hiện các thao tác cuối 
+VIII. DI: tách các class độc lập với biến phụ thuộc của nó
+có 3 cách DI:
++ Cotructer Injection
++ Setter Injection: 
++ Interface Injection
+2. IOC: Đảo ngược điều khiển, nó giúp làm thay đổi luồng điều khiển của chương trình 1 cách linh hoạt. Giúp làm thay đổi luồng điều khiển một cách linh hoạt
+có 2 kiểu IOC: ApplicationContext là 1 sub-interface của BeanFactory nên nó sẽ có tất cả các tính năng của BeanFactory
+IIX.Bean
+là module của chương trinh
+Singleton: được tạo ra 1 lần duy nhất từ đầu đến cuối chương trình 
+Prototype: tạo ra đối tượng mỗi khi được gọi tới
+Request: định nghĩa ra 1 http request
+Session: định ghĩa ra 1 http session
+Global- session: định nghĩa ra 1 grobal- sesion
+IX. Phân biệt JVM, JDK, JRE:
+JVM: máy ảo thực thi các chương trình java
+JDK: cung cấp mtr phát triên r ứng dụng java
+JRE: Cung cấp mtr thwucj thi các chương trình java .
+
+** Class: Cũng chinhs là 1 obj
+** Object:Định nghĩa chung 
+** Instance: Thể hiện của 1 obj
+
+** tính bất biến: sẽ chỉ tạo r a1 lần duuy nhất mà kbh thay đổi
+VD: có 3 class a, b,c 
+** API: là phương pháp trung gian kết nối giúp giao tiếp với nhau bằng 1 tập hợp và định nghĩa.
