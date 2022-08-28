@@ -28,7 +28,7 @@ một cửa hàng phụ trợ (chẳng hạn như cơ sở dữ liệu), nó yê
 Connection pooling means that connections are reused rather than created each time a connection is requested. 
 To facilitate connection reuse, a memory cache of database connections, called a connection pool, 
 is maintained by a connection pooling module as a layer on top of any standard JDBC driver product.
-<Kết nối gộp có nghĩa là các kết nối được sử dụng lại thay vì được tạo mỗi khi yêu cầu kết nối. Để tạo điều kiện tái sử dụng kết nối,
+<Connection pooling <Kết nối gộp> có nghĩa là các kết nối được sử dụng lại thay vì được tạo mỗi khi yêu cầu kết nối. Để tạo điều kiện tái sử dụng kết nối,
 bộ nhớ cache bộ nhớ của các kết nối cơ sở dữ liệu, được gọi là nhóm kết nối, 
 được duy trì bởi mô -đun gộp kết nối như một lớp trên đầu của bất kỳ sản phẩm trình điều khiển JDBC tiêu chuẩn nào.>
 
