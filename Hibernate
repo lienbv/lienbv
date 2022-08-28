@@ -3,7 +3,7 @@ I. What is hibernate ??
 => An ORM tool simplifies the data creation, data manipulation and data access. 
 It is a programming technique that maps the object to the data stored in the database.
 II. Cơ ché hoạt động của Hibernate
-
-
+Persistence object: chứa dữ liệu từ ứng dụng để ghi xuống database
 
 => Reference link: https://www.javatpoint.com/hibernate-tutorial
+https://by.com.vn/8WUsif
