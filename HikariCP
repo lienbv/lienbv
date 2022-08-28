@@ -1,0 +1,37 @@
++ Cấu hình HikariCP: Là datasource được mặc định 
++ thêm thư việc vào cho maven
++ spring.datasource.hikari.connectionTimeout=30000 // Thời gian tính bằng mili giây mà client sẽ chờ một connection từ pool
++ spring.datasource.hikari.idleTimeout=600000 // Thiết lập thời gian tối đa mà kết nối được phép để ở chế độ chờ trong pool
++ spring.datasource.hikari.maxLifetime=1800000 // Tuổi thọ tối đa của một connection trong pool
++ spring.datasource.hikari.leakDetectionThreshold=300000 // ngưỡng phát hiện rò rỉ 
+(Rò rỉ kết nối có nghĩa là một số yêu cầu/giao dịch cơ sở dữ liệu
+không bị đóng đúng cách hoặc không được cam kết và cuối cùng các kết nối đó đang bị hủy bỏ và đóng vĩnh viễn.)
+
+=> Hikari là thư viện để tạo kết nối tới databse trong java, một connection là một bộ đệm duy trì kết nối tới database
+=> Cơ chế hoạt động: Khi một connection được tạo , nó sẽ được đưa vào pool và sử dụng lại các yêu
+cầu kết nối tiếp theo và chỉ bị đóng khi hết time timeout
+=> Hikari: hiệu năng cao mà nhẹ 
+1. What is leakDetectionThreshold in HikariCP : 
+
+The leakDetectionThreshold of hikari connection pool is used to set the timeout time taken by the connection, in milliseconds. The default value is 0,
+which disables connection leak detection. This function is equivalent to checkAbandoned in poolCleaner of tomcat jdbc pool.
+<Rò rỉ của nhóm kết nối Hikari được sử dụng để đặt thời gian chờ được thực hiện bởi kết nối, tính bằng mili giây. Giá trị mặc định là 0,
+trong đó vô hiệu hóa phát hiện rò rỉ kết nối. Chức năng này tương đương với việc kiểm tra trong nhóm của nhóm Tomcat JDBC.>
+
+2. What is maxLifetime in HikariCP: Tuổi thọ tối đa của 1 connection trong pool
+
+3.Why do we need connection pool
+=> Sử dụng các nhóm kết nối giúp vừa giảm bớt chi phí quản lý kết nối và giảm các nhiệm vụ phát triển để truy cập dữ liệu. Mỗi lần một ứng dụng cố gắng truy cập vào 
+một cửa hàng phụ trợ (chẳng hạn như cơ sở dữ liệu), nó yêu cầu các tài nguyên để tạo, duy trì và phát hành kết nối với kho dữ liệu đó.
+
+4.How does connection pooling work? (Làm thế nào để connection pooling làm việc)
+Connection pooling means that connections are reused rather than created each time a connection is requested. 
+To facilitate connection reuse, a memory cache of database connections, called a connection pool, 
+is maintained by a connection pooling module as a layer on top of any standard JDBC driver product.
+<Kết nối gộp có nghĩa là các kết nối được sử dụng lại thay vì được tạo mỗi khi yêu cầu kết nối. Để tạo điều kiện tái sử dụng kết nối,
+bộ nhớ cache bộ nhớ của các kết nối cơ sở dữ liệu, được gọi là nhóm kết nối, 
+được duy trì bởi mô -đun gộp kết nối như một lớp trên đầu của bất kỳ sản phẩm trình điều khiển JDBC tiêu chuẩn nào.>
+
+=> Reference links: https://theknowledgeburrow.com/what-is-leakdetectionthreshold-in-hikari/
+=> https://www.javadoc.io/doc/com.zaxxer/HikariCP/1.2.4/com/zaxxer/hikari/HikariConfig.html
+=> Continue update .... => Unfinished
