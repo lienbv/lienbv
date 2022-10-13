@@ -70,6 +70,6 @@ public class RedisConfig {
         return template;
     }
 }
-
+- Để lưu value vào redis 
 
 
