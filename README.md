@@ -46,9 +46,10 @@ Cơ chế này lưu data theo từng vùng để biết data ở đâu mà tìm 
 
 13/ Có khoảng 7 tỉ data cần lưu. Tuy vậy chỉ có khoảng 1 tỉ data cần đẩy lên online và các data còn lại thì chỉ ở dạng lưu trữ để tham chiếu khi cần thiết.
  Nên tổ chức lưu trữ data thế nào sao cho thuận tiện, đảm bảo cả về performance và tính tiện lợi
-Có thể trả lời là lưu 2 schema. 1 schema lưu online, 1 schema lưu tất tần tật chỗ còn lại và đánh partition, index cho phù hợp (https://comdy.vn/sql-server/schema-trong-sql-server/)
+Có thể trả lời là lưu 2 schema. 1 schema lưu online, 1 schema lưu tất tần tật chỗ còn lại và đánh partition, index cho phù hợp (https://comdy.vn/sql-server/schema-trong-sql-server/).
+
 14/ Có cách nào để kiểm tra index đã được thiết định đúng chưa không
-Dùng Explain SQL. Chú ý với DB là Oracle thiết định index chưa chắc đã chạy theo index. Tìm hiểu keyword Oracle Hint
+Dùng Explain SQL. Chú ý với DB là Oracle thiết định index chưa chắc đã chạy theo index. Tìm hiểu keyword Oracle Hint.
 15/ StringPool trong Java
 Đọc về phần này. Chú ý cơ chế Garbage Collection của Java 7 và Java 8 với String là khác nhau
 
