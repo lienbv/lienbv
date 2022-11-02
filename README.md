@@ -101,6 +101,7 @@ Dùng Explain SQL. Chú ý với DB là Oracle thiết định index chưa chắ
 - OOP:
 + Phân biệt Kế thừa và Đa hình
 + Tính đóng gói là gì và thể hiện như nào trong code
++ 4 tính chất oop
 ----------------------------
 java core
 1. So sánh sự khác biệt interface và abstract
@@ -143,7 +144,7 @@ Nâng cao
 
 Bài toán
 1. Có 1 dãy số tự nhiên 1 đến N có 1 số bất kỳ khác dãy N. Làm thế nào tìm ra số kia
-2. Có 8 viên bi trong đó có 1 viên bi nặng hơn cần ít nhất mấy lần cân để tìm ra viên bi đó
+2. Có 8 viên bi trong đó có 1 viên bi nặng hơn cần ít nhất mấy lần cân để tìm ra viên bi đó => 3 cách 
 3. Có 1 chuỗi gồm 2 ký tự. Làm sao biết chuỗi đó có cân bằng không
 ---------------------------------
 - Exception trong java có mấy loại ?
@@ -173,3 +174,28 @@ Bài toán
 - ArrayList và LinkedList khác nhau như nào ?
 - Trong table A có trường Ngày đăng ký, khi đăng ký data vào bảng này thì tự động lấy ngày giờ hệ thống để đăng ký vào trường này. Việc này xử lý như nào trong MySQL ? Oracle ?
 - Trình bày mô hình SpringMVC.
+---------------------------------------------
+DATABASE
+1. Group by , having là gì
+2. Muốn lưu dữ liệu lớn trong proceduce thì làm cách nào
+3. Muốn lưu nhiều dữ liệu dùng 1 lúc trong db thì lm thế nào
+4. Đệ quy 
+5. Index 
+6. Union và UnionAll 
+7. Có 2 table không có liên quan j đến nhau làm cách nào để lây được dữ liệu từ cả 2 bảng 1 lúc ( union or unionAll)
+8. Có 1000 bản ghi dùng cách nào để lưu 1 lúc nhiều dữ liệu vào db cùng 1 lúc => dùng for chia ra mỗi lần lưu <=200 bản ghi...
+9. ....to be continue
+GIT
+1. làm thế nào để sử lí được conflic
+2. Các lệnh trong git
+3. ... to be continue
+JUNIT TEST
+1. junit test dùng để làm j
+2. nêu các bước để viết unit tets
+3. befor, after là gì
+4. BeforAll, afterAll là gì
+5. VD: 1 bài toán cộng thì có bao nhiêu trường hợp => 2 trường hợp: hợp lệ và không hợp lệ 
+6. Có bao nhiêu cách chạy test
+7. Test runner là gì
+8. Test database bao giò chưa, làm thế nào để test.
+9. ... TO BE CONTINUTE
