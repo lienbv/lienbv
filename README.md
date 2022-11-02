@@ -141,6 +141,10 @@ Nâng cao
 1. So sánh session và JWT
 2. Có biết micro service không. Có các cách giao tiếp nào giữa các.service
 3. Kafka là gì, docker là gì có biết ko
+4. Nêu cơ chế hoạt động của JWT
+5. Làm thế nào để có thể lấy ra được giá trị trong JWT
+6. LÀm sao để phân biệt được role trong JWT
+7. ... TO BE CONTINUTE
 
 Bài toán
 1. Có 1 dãy số tự nhiên 1 đến N có 1 số bất kỳ khác dãy N. Làm thế nào tìm ra số kia
@@ -184,11 +188,13 @@ DATABASE
 6. Union và UnionAll 
 7. Có 2 table không có liên quan j đến nhau làm cách nào để lây được dữ liệu từ cả 2 bảng 1 lúc ( union or unionAll)
 8. Có 1000 bản ghi dùng cách nào để lưu 1 lúc nhiều dữ liệu vào db cùng 1 lúc => dùng for chia ra mỗi lần lưu <=200 bản ghi...
-9. ....to be continue
+9. ....to be continue.
+---------------------------------------------
 GIT
-1. làm thế nào để sử lí được conflic
-2. Các lệnh trong git
-3. ... to be continue
+11. làm thế nào để sử lí được conflic
+12. Các lệnh trong git
+13. ... to be continue
+----------------------------------------------
 JUNIT TEST
 1. junit test dùng để làm j
 2. nêu các bước để viết unit tets
