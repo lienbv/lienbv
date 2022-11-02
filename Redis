@@ -70,6 +70,6 @@ public class RedisConfig {
         return template;
     }
 }
-- Để lưu value vào redis 
+- Để lưu value vào redis có thể dùng CRUD của @Repository or dùng các hàm mà nó cung cấp.
 
 
