@@ -1,1 +1,6 @@
 
+Spring security: là một khung bảo mật của java cung cấp cơ chế cấp quyền( Authorization) và xác thực(authentication).
+Chống được các kĩ thuật hack: 
+1. Session fixation (Tấn công chiếm quyền điều khiển session của người dùng) [2]
+2. Clickjacking (click chuột tự động, ví dụ click vào nút Like Facebook mà không xin phép người dùng)
+3. CSRF (Cross-site request forgery: Tạo truy vấn (request) giả mạo truyền từ trang này sang trang khác)
