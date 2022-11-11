@@ -6,70 +6,13 @@ https://docs.redis.com/latest/rs/references/client_references/client_java/
 
 Redis là 1 hệ thống lưu trữ key-value in-memory rất mạnh mẽ và phổ biến hiện nay.
 Redis nổi bật bởi việc hỗ trợ nhiều cấu trúc dữ liệu khác nhau (hash, list, set, sorted set, string), giúp việc thao tác với dữ liệu cực kì nhanh và thuận tiện.
-Các dependencies :
-
-<dependencies>
-    <!--spring mvc, rest-->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-redis</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>io.lettuce</groupId>
-      <artifactId>lettuce-core</artifactId>
-      <version>5.1.3.RELEASE</version>
-    </dependency>
-</dependencies>
 
 lettuce-core là một thư viện mã nguồn mở, giúp kết nối tới Redis một cách thread-safe bằng nhiều hình thức như synchronous, asynchronous and reactive usage.
 lettuce để kết nối tới Redis, nên tôi tạo ra bean LettuceConnectionFactory và Spring Data sẽ tự động nhận vào cấu hình của mình.
 Đối tượng để thao tác với Redis chính là RedisTemplate.
 Tạo file RedisConfig.java để cấu hình mọi thứ liên quan tới Redis.
-
-
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
-import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
-import org.springframework.data.redis.core.RedisTemplate;
-
-@Configuration
-public class RedisConfig {
-    @Value("${redis.host}")
-    private String redisHost;
-
-    @Value("${redis.port}")
-    private int redisPort;
-
-
-    @Bean
-    public LettuceConnectionFactory redisConnectionFactory() {
-        // Tạo Standalone Connection tới Redis
-        return new LettuceConnectionFactory(new RedisStandaloneConfiguration(redisHost, redisPort));
-    }
-
-    @Bean
-    @Primary
-    public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
-        // tạo ra một RedisTemplate
-        // Với Key là Object
-        // Value là Object
-        // RedisTemplate giúp chúng ta thao tác với Redis
-        RedisTemplate<Object, Object> template = new RedisTemplate<>();
-        template.setConnectionFactory(redisConnectionFactory);
-        return template;
-    }
-}
 - Để lưu value vào redis có thể dùng CRUD của @Repository or dùng các hàm mà nó cung cấp.
-
-
+1. Bạn có thể dùng redis để cache, quản lí các session trong ứng dụng 1 cách nhanh chóng. 
+a. Redis Sentinel: được dùng khi không quan tâm tới tốc độ truy vấn
+b. Redis Cluster: giải pháp phân cụm. tốc độ truy vấn nhanh vào dữ liệu của bạn.
+   + Redis Cluster: yêuu cầu mở 2 cổng kết nối TCP. 
